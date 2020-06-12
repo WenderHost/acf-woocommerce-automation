@@ -19,6 +19,7 @@ define( 'ACF_WCA_DEV_ENV', stristr( site_url(), '.local' ) );
 
 // Include required files
 require_once( 'lib/fns/acf-json-save-point.php' );
+require_once( 'lib/fns/woocommerce.php' );
 
 /**
  * Enhanced logging
