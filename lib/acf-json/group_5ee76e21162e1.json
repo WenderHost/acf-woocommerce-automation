@@ -1,0 +1,181 @@
+{
+    "key": "group_5ee76e21162e1",
+    "title": "ACF WC Automations Page",
+    "fields": [
+        {
+            "key": "field_5ee76e4d2622e",
+            "label": "Automations",
+            "name": "automations",
+            "type": "repeater",
+            "instructions": "Add automations to occur after a customer completes a WooCommerce order.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Automation",
+            "sub_fields": [
+                {
+                    "key": "field_5ee76e732622f",
+                    "label": "Automation",
+                    "name": "automation",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ee76e9d26230",
+                            "label": "Product",
+                            "name": "product",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "product"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 1,
+                            "multiple": 0,
+                            "return_format": "object",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_5ee76fc895f16",
+                            "label": "Action",
+                            "name": "action",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layouts": {
+                                "layout_5ee76fe983730": {
+                                    "key": "layout_5ee76fe983730",
+                                    "name": "email",
+                                    "label": "Send Email",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5ee7702a95f17",
+                                            "label": "Recipient",
+                                            "name": "recipient",
+                                            "type": "text",
+                                            "instructions": "Enter the email address where you want this notification sent. Accepts an email address or these tokens <code>{customer_email}<\/code> or <code>{admin_email}<\/code>.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_5ee770ef95f18",
+                                            "label": "Message",
+                                            "name": "message",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "maxlength": "",
+                                            "rows": "",
+                                            "new_lines": ""
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                "layout_5ee7711a95f19": {
+                                    "key": "layout_5ee7711a95f19",
+                                    "name": "subscribe",
+                                    "label": "Subscribe to MailPoet List",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5ee7712b95f1a",
+                                            "label": "MailPoet List",
+                                            "name": "mailpoet_list",
+                                            "type": "wisija_select",
+                                            "instructions": "Select the MailPoet List you want to subscribe the user to.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "placeholder": "",
+                                            "disabled": 0,
+                                            "readonly": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            },
+                            "button_label": "Add Action",
+                            "min": "",
+                            "max": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-automations"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1592232441
+}
