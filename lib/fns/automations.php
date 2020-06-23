@@ -48,6 +48,14 @@ function payment_complete( $order_id ){
       $customer['email'] = $user->data->user_email;
     }
 
+    // Get our global automation options.
+    $default_from_name = get_field( 'default_from_name', 'option' );
+    if( empty( $default_from_name ) )
+      $default_from_name = get_bloginfo( 'name' );
+    $default_from_email = get_field( 'default_from_email', 'option' );
+    if( ! is_email( $default_from_email ) )
+      $default_from_email = get_bloginfo( 'admin_email' );
+
     // Process any automations we've defined
     if( \have_rows( 'automations', 'option' ) ){
       while( \have_rows( 'automations', 'option' ) ): the_row();
@@ -59,12 +67,12 @@ function payment_complete( $order_id ){
           switch( $action ){
             case 'subscribe':
               if( has_automation( $automation['product'], $order_items ) )
-                require_once( plugin_dir_path( __FILE__ ) . 'automations.subscribe.php' );
+                require( plugin_dir_path( __FILE__ ) . 'automations.subscribe.php' );
               break;
 
             case 'email':
               if( has_automation( $automation['product'], $order_items ) )
-                require_once( plugin_dir_path( __FILE__ ) . 'automations.email.php' );
+                require( plugin_dir_path( __FILE__ ) . 'automations.email.php' );
               break;
           }
         }
