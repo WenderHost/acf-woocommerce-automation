@@ -15,9 +15,46 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Nothing to see here at the moment. Please go to ACF WC Automation > Automations to configure your automations.",
+            "message": "Settings on this page address settings which apply to all of your automations.",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_5eeb5db7439aa",
+            "label": "Default From Name",
+            "name": "default_from_name",
+            "type": "text",
+            "instructions": "This is the default name that your automation emails will show for the from \"Name\".",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5eeb5dfc439ab",
+            "label": "Default From Email",
+            "name": "default_from_email",
+            "type": "email",
+            "instructions": "This is the default email address we'll use for any emails we send. To prevent your messages from being flagged as spam, we highly recommend that you use an email address on the same domain as this website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -37,5 +74,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1592304027
+    "modified": 1592483449
 }

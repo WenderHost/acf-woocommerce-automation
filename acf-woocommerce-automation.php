@@ -17,11 +17,16 @@ $css_dir = ( stristr( site_url(), '.local' ) || SCRIPT_DEBUG )? 'css' : 'dist' ;
 define( 'ACF_WCA_CSS_DIR', $css_dir );
 define( 'ACF_WCA_DEV_ENV', stristr( site_url(), '.local' ) );
 
+// Load Composer Modules
+require_once( 'vendor/autoload.php' );
+
 // Include required files
 require_once( 'lib/fns/acf.php' );
 require_once( 'lib/fns/acf-mailpoet-list-select.php' );
 require_once( 'lib/fns/acf-json-save-point.php' );
-require_once( 'lib/fns/woocommerce.php' );
+require_once( 'lib/fns/automations.php' );
+require_once( 'lib/fns/handlebars.php' );
+require_once( 'lib/fns/utilities.php' );
 
 /**
  * Enhanced logging

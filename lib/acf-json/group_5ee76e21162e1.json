@@ -55,13 +55,13 @@
                             "taxonomy": "",
                             "allow_null": 1,
                             "multiple": 0,
-                            "return_format": "object",
+                            "return_format": "id",
                             "ui": 1
                         },
                         {
                             "key": "field_5ee76fc895f16",
-                            "label": "Action",
-                            "name": "action",
+                            "label": "Actions",
+                            "name": "actions",
                             "type": "flexible_content",
                             "instructions": "",
                             "required": 0,
@@ -98,11 +98,30 @@
                                             "maxlength": ""
                                         },
                                         {
+                                            "key": "field_5ef11c527668f",
+                                            "label": "Subject",
+                                            "name": "subject",
+                                            "type": "text",
+                                            "instructions": "Enter the subject of this email.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
                                             "key": "field_5ee770ef95f18",
                                             "label": "Message",
                                             "name": "message",
                                             "type": "textarea",
-                                            "instructions": "",
+                                            "instructions": "Accepts these tokens: <code>{customer_name}<\/code>, <code>{customer_email}<\/code>.",
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "wrapper": {
@@ -114,7 +133,7 @@
                                             "placeholder": "",
                                             "maxlength": "",
                                             "rows": "",
-                                            "new_lines": ""
+                                            "new_lines": "br"
                                         }
                                     ],
                                     "min": "",
@@ -177,5 +196,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1592232441
+    "modified": 1592859757
 }
