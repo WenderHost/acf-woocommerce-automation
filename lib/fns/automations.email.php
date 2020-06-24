@@ -42,6 +42,7 @@ $html_message = render_template([
   'store_address'   => get_store_address(),
   'message'         => $message,
   'logo'            => $logo,
+  'preheader_text'  => '',
 ]);
 
 $headers = [
