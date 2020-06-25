@@ -7,7 +7,7 @@
  * Author URI:      https://mwender.com
  * Text Domain:     acf-woocommerce-automation
  * Domain Path:     /languages
- * Version:         1.0.2
+ * Version:         1.0.3
  *
  * @package         Acf_Woocommerce_Automation
  */

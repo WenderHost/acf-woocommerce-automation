@@ -46,9 +46,9 @@ function payment_complete( $order_id ){
       $customer['last_name'] = get_user_meta( $user->ID, 'last_name', true );
       $customer['email'] = $user->data->user_email;
     } else {
-      $customer['first_name'] = $order->billing_first_name;
-      $customer['last_name'] = $order->billing_last_name;
-      $customer['email'] = $order->billing_email;
+      $customer['first_name'] = $order->get_billing_first_name();
+      $customer['last_name'] = $order->get_billing_last_name();
+      $customer['email'] = $order->get_billing_email();
     }
 
     // Get our global automation options.
