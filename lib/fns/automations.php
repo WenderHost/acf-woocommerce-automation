@@ -42,10 +42,13 @@ function payment_complete( $order_id ){
     $user = $order->get_user();
     $customer = [];
     if( $user ){
-      //uber_log( '🔔 $user = ' . print_r( $user, true ) );
       $customer['first_name'] = get_user_meta( $user->ID, 'first_name', true );
       $customer['last_name'] = get_user_meta( $user->ID, 'last_name', true );
       $customer['email'] = $user->data->user_email;
+    } else {
+      $customer['first_name'] = $order->billing_first_name;
+      $customer['last_name'] = $order->billing_last_name;
+      $customer['email'] = $order->billing_email;
     }
 
     // Get our global automation options.
