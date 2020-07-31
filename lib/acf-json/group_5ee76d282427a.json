@@ -70,9 +70,9 @@
     "position": "normal",
     "style": "default",
     "label_placement": "top",
-    "instruction_placement": "label",
+    "instruction_placement": "field",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1592483449
+    "modified": 1596189484
 }
