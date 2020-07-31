@@ -49,4 +49,15 @@ $headers = [
   'Content-Type: text/html; charset=UTF-8',
   'From: ' . $default_from_name . ' <' . $default_from_email . '>'
 ];
+
+$send_bccs = get_field( 'send_bccs', 'option' );
+$global_bcc = get_field( 'global_bcc', 'option' );
+if(
+  $send_bccs
+  && 'Yes' == $send_bccs[0]
+  && $global_bcc
+  && is_email( $global_bcc )
+){
+  $headers[] = 'Bcc: ' . $global_bcc;
+}
 wp_mail( $recipient, $subject, $html_message, $headers );

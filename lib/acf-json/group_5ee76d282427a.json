@@ -55,6 +55,47 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_5f2426258d1ec",
+            "label": "Global BCC",
+            "name": "global_bcc",
+            "type": "email",
+            "instructions": "Send a BCC of all automation emails to this address.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5f2426568d1ed",
+            "label": "Send BCCs?",
+            "name": "send_bccs",
+            "type": "checkbox",
+            "instructions": "Check this box to send a BCC of all emails to the Global BCC email address.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
         }
     ],
     "location": [
@@ -74,5 +115,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1596189484
+    "modified": 1596204712
 }
